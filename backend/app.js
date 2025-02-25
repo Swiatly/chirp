@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 const app = express(); 
 
+const userRoutes = require('./routes/user');
+
 mongoose.connect('mongodb+srv://admin:admin@cluster0.zlhit.mongodb.net/mean-course?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => {
         console.log('Connected to database!')
@@ -26,5 +28,7 @@ app.use((req, res, next) => {
     
     next();
 });
+
+app.use('/api/user', userRoutes);
 
 module.exports = app; 
