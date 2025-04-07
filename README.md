@@ -1,4 +1,4 @@
-# **Chirp**
+# **Chirp (currently working on)**
 
 **Chirp** is a social platform inspired by Twitter, where users can post short messages (tweets), comment on them, like, and retweet. It creates an interactive and dynamic space for users to express their thoughts, share opinions, and engage in lively discussions.
 
