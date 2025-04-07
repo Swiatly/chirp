@@ -12,6 +12,6 @@ With an intuitive user interface, **Chirp** aims to provide a seamless experienc
 - **Real-time Updates**: Get immediate updates on new tweets, likes, comments, and retweets from your feed.
 
 ## Technologies:
-- **Frontend**: Angular 
+- **Frontend**: Angular with PrimeNG
 - **Backend**: Node.js with Express
 - **Database**: MongoDB
