@@ -1,0 +1,35 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem 3rem;
+    border-radius: 16px;
+    border: 2px solid #34d399;
+
+    p-iftalabel {
+        width: 100%;
+    
+        input,
+        p-password {
+            width: 100%;
+        }
+    }
+}
+
+.error {
+    opacity: 0;
+    transform: translateY(5px) scale(0.95);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@keyframes rotateBorder {
+    to {
+        transform: rotate(1turn);
+    }
+}

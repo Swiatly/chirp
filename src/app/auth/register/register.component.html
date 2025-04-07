@@ -1,0 +1,43 @@
+<div class="full-size center">
+    <form class="register-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <!-- Email -->
+        <p-iftalabel>
+            <input pInputText id="email" type="email" formControlName="email" autocomplete="off">
+            <p-message class="error" [class.visible]="email.invalid && email.touched" severity="error" variant="simple" size="small">
+                Please enter a valid email.
+            </p-message>
+            <label for="email">Email</label>
+        </p-iftalabel>
+    
+        <!-- Username -->
+        <p-iftalabel>
+            <input pInputText id="username" type="text" formControlName="username" autocomplete="off">
+            <p-message class="error" [class.visible]="username.invalid && username.touched" severity="error" variant="simple" size="small">
+                Username is required.
+            </p-message>
+            <label for="username">Username</label>
+        </p-iftalabel>
+        <div *ngIf=""></div>
+    
+        <!-- Password -->
+        <p-iftalabel>
+            <p-password id="password" formControlName="password" autocomplete="off" [toggleMask]="true" [feedback]="false"/>
+            <p-message class="error" [class.visible]="password.invalid && password.touched" severity="error" variant="simple" size="small">
+                Password is too weak.
+            </p-message>
+            <label for="password">Password</label>
+        </p-iftalabel>
+    
+        <!-- Repeat Password -->
+        <p-iftalabel>
+            <p-password id="confirmPassword" formControlName="confirmPassword" autocomplete="off" [toggleMask]="true" [feedback]="false"/>
+            <p-message class="error" [class.visible]="password.value !== confirmPassword.value && confirmPassword.touched" severity="error" variant="simple" size="small">
+                Passwords do not match.
+            </p-message>
+            <label for="confirmPassword">Confirm password</label>
+        </p-iftalabel>
+
+        <!-- Submit Button -->
+        <p-button label="Submit" [disabled]="registrationForm.invalid"/>
+    </form>
+</div>
